@@ -1,0 +1,81 @@
+[{
+	"Year": "2001",
+	"Vehicles": 27831,
+	"Property": 27158,
+	"State_Sup_Property": 559
+}, {
+	"Year": "2002",
+	"Vehicles": 27540,
+	"Property": 26329,
+	"State_Sup_Property": 535
+}, {
+	"Year": "2003",
+	"Vehicles": 27223,
+	"Property": 24412,
+	"State_Sup_Property": 494
+}, {
+	"Year": "2001",
+	"Vehicles": 25638,
+	"Property": 24157,
+	"State_Sup_Property": 383
+}, {
+	"Year": "2005",
+	"Vehicles": 26238,
+	"Property": 24548,
+	"State_Sup_Property": 334
+}, {
+	"Year": "2006",
+	"Vehicles": 26585,
+	"Property": 25149,
+	"State_Sup_Property": 307
+}, {
+	"Year": "2007",
+	"Vehicles": 24906,
+	"Property": 23606,
+	"State_Sup_Property": 253
+}, {
+	"Year": "2008",
+	"Vehicles": 25570,
+	"Property": 22994,
+	"State_Sup_Property": 229
+}, {
+	"Year": "2009",
+	"Vehicles": 22372,
+	"Property": 20834,
+	"State_Sup_Property": 193
+}, {
+	"Year": "2010",
+	"Vehicles": 19330,
+	"Property": 17864,
+	"State_Sup_Property": 170
+}, {
+	"Year": "2011",
+	"Vehicles": 17358,
+	"Property": 16897,
+	"State_Sup_Property": 147
+}, {
+	"Year": "2012",
+	"Vehicles": 16997,
+	"Property": 16352,
+	"State_Sup_Property": 164
+}, {
+	"Year": "2013",
+	"Vehicles": 14290,
+	"Property": 14124,
+	"State_Sup_Property": 142
+}, {
+	"Year": "2014",
+	"Vehicles": 13215,
+	"Property": 12766,
+	"State_Sup_Property": 133
+}, {
+	"Year": "2015",
+	"Vehicles": 14232,
+	"Property": 13190,
+	"State_Sup_Property": 129
+}, {
+	"Year": "2016",
+	"Vehicles": 4247,
+	"Property": 3985,
+	"State_Sup_Property": 33
+}]

@@ -1,0 +1,85 @@
+{
+    "part1": [
+
+        {
+            "Year": 2001,
+            "Burglary": "25748",
+            "robbery": "18359"
+        },
+        {
+            "Year": 2002,
+            "Burglary": "25359",
+            "robbery": "18397"
+        },
+        {
+            "Year": 2003,
+            "Burglary": "24875",
+            "robbery": "7205"
+        },
+        {
+            "Year": 2004,
+            "Burglary": "24308",
+            "robbery": "15834"
+        },
+        {
+            "Year": 2005,
+            "Burglary": "25246",
+            "robbery": "15879"
+        },
+        {
+            "Year": 2006,
+            "Burglary": "24128",
+            "robbery": "15829"
+        },
+        {
+            "Year": 2007,
+            "Burglary": "24674",
+            "robbery": "15324"
+        },
+        {
+            "Year": 2008,
+            "Burglary": "26048",
+            "robbery": "16565"
+        },
+        {
+            "Year": 2009,
+            "Burglary": "26601",
+            "robbery": "15866"
+        },
+        {
+            "Year": 2010,
+            "Burglary": "26261",
+            "robbery": "14160"
+        },
+        {
+            "Year": 2011,
+            "Burglary": "26439",
+            "robbery": "13902"
+        },
+        {
+            "Year": 2012,
+            "Burglary": "22664",
+            "robbery": "13421"
+        },
+        {
+            "Year": 2013,
+            "Burglary": "17733",
+            "robbery": "11762"
+        },
+        {
+            "Year": 2014,
+            "Burglary": "14441",
+            "robbery": "9745"
+        },
+        {
+            "Year": 2015,
+            "Burglary": "13078",
+            "robbery": "9608"
+        },
+        {
+            "Year": 2016,
+            "Burglary": "3636",
+            "robbery": "3029"
+        }
+    ]
+}

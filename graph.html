@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Part1</title>
+
+    <link rel="stylesheet" type="text/css" href="css/graph1.css">
+</head>
+
+<body>
+    <div class="legend">
+        <h4>Legend</h4>
+        <div class="legend1">
+            <p class="country-name"><span class="key-dot queens"></span>Robbery</p>
+        </div>
+        <div class="legend1">
+            <p class="country-name"><span class="key-dot kings"></span>Burglary</p>
+        </div>
+
+    </div>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script>
+        var margin = {
+                top: 20,
+                right: 20,
+                bottom: 50,
+                left: 100
+            },
+            width = 960 - margin.left - margin.right,
+            height = 500 - margin.top - margin.bottom;
+        var parseTime = d3.timeParse("%Y");
+        var x = d3.scaleTime().range([0, width]);
+        var y = d3.scaleLinear().range([height, 0]);
+        var valueline = d3.line()
+            .x(function (d) {
+                return x(d.Year);
+            })
+            .y(function (d) {
+                return y(d.Burglary);
+            });
+        var valueline2 = d3.line()
+            .x(function (d) {
+                return x(d.Year);
+            })
+            .y(function (d) {
+                return y(d.robbery);
+            });
+
+        var svg = d3.select("body").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform",
+                "translate(" + margin.left + "," + margin.top + ")");
+
+        function draw(data, country) {
+
+            var data = data[country];
+
+            data.forEach(function (d) {
+                d.Year = parseTime(d.Year);
+                d.Burglary = +d.Burglary;
+                d.robbery = +d.robbery;
+            });
+
+            data.sort(function (a, b) {
+                return a["Year"] - b["Year"];
+            })
+
+
+            x.domain(d3.extent(data, function (d) {
+                return d.Year;
+            }));
+            y.domain([0, d3.max(data, function (d) {
+                return Math.max(d.Burglary, d.robbery);
+            })]);
+
+
+            svg.append("path")
+                .data([data])
+                .attr("class", "line")
+                .attr("stroke", "green")
+                .attr("d", valueline);
+            svg.append("path")
+                .data([data])
+                .attr("class", "line")
+                .attr("stroke", "blue")
+                .attr("d", valueline2);
+            svg.append("g")
+                .attr("transform", "translate(0," + height + ")")
+                .call(d3.axisBottom(x));
+            svg.append("g")
+                .call(d3.axisLeft(y));
+            svg.append("text")
+                .attr("transform",
+                    "translate(" + (width / 2) + " ," +
+                    (height+30) + ")")
+                .style("text-anchor", "middle")
+                .text("Year");
+                svg.append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 0 - margin.left)
+      .attr("x",0 - (height / 2))
+      .attr("dy", "1em")
+      .style("text-anchor", "middle")
+      .text("Counter");
+        }
+        d3.json("json/part1.json", function (error, data) {
+            if (error) throw error;
+
+
+            draw(data, "part1");
+        });
+    </script>
+</body>
